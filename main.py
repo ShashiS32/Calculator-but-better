@@ -33,7 +33,12 @@ def multiplication():
     print(result)
 
 def division():
-    result = math.remainder(nums_they_working_with)
+    result = nums_they_working_with[0]
+    for num in nums_they_working_with[1:]:
+        if num == 0:
+            print("Division by 0 is not allowed ")
+            return
+        result /= num
     print(result)
 
 
@@ -49,7 +54,7 @@ if choice == "Addition":
     addition()
 elif choice == "Subtraction":
     subtraction()
-elif choice.capitalize() == "Multiplication":
+elif choice == "Multiplication":
     multiplication()
-elif choice.capitalize() == "Division":
+elif choice == "Division":
     division()
